@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        L’usuari ha d’introduir dos números, el programa retornarà “Un dels dos números és negatiu”, només si un dels
+        dos números és negatiu.
+    </p>
+
+    <script>
+        let num1 = parseInt(prompt("Num1: "));
+        let num2 = parseInt(prompt("Num2: "));
+        let resultado = " " + num1 + " y " + num2 + "\n";
+
+        if (num1 < 0 || num2 < 0) resultado += "uno de los 2 es negativo";
+        alert(resultado);
+    </script>
+</body>
+
+</html>

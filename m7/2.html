@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Un professor vol calcular les mitges de les notes de tota la classe. Crea una aplicació on l'usuari introduirà
+        un número per pantalla (el número correspon al número de notes que vol introduir) i el programa li demanarà que
+        introdueixi les notes de tots els alumnes.
+        <br>
+        Un cop les notes han sigut introduides, el programa retorna el següent:
+        <br>
+        Si la nota mitjana és menor que 5: "La nota mitjana de la classe està suspesa. Els alumnes haurien de preguntar
+        els seus dubtes i treballar més".
+        <br>
+        Si la nota és inferior a 7: "La nota mitjana de la classe és bona, però els alumnes haurien de millorar el
+        treball personal".
+        <br>
+        Per la resta de casos, el missatge ha de ser: "Enhorabona! La nota mitjana de la classe es correspon amb
+        l'esforç realitzat".
+        <br>
+        *Les notes han d'estar compreses entre 0 i 10.
+    </p>
+
+    <script>
+        let LoggArrNotas = parseInt(prompt("Núm de Notas: "));
+        let arrNotas = [];
+        arrNotas[0] = 0;
+
+
+        for (i = 1; i <= LoggArrNotas; i++) {
+            arrNotas[i] = parseInt(prompt("Nota " + i + ": "));
+        }
+
+        let media = 0;
+        let sumaNotas = 0;
+        let resultado = "";
+
+        // Calular nota media
+        for (i = 1; i <= LoggArrNotas; i++) {
+            sumaNotas = parseInt(arrNotas[i] + sumaNotas);
+        }
+
+        media = parseInt((sumaNotas) / LoggArrNotas);
+        resultado = "Media: " + media + "\n";
+        if (media < 5) resultado += "La nota mitjana de la classe està suspesa. Els alumnes haurien de preguntar els seus dubtes i treballar més";
+        if (media >= 5 && media <= 7) resultado += "La nota mitjana de la classe és bona, però els alumnes haurien de millorar el treball personal";
+        if (media > 7) resultado += "Enhorabona! La nota mitjana de la classe es correspon amb l'esforç realitzat";
+
+        alert(resultado);
+
+    </script>
+</body>
+
+</html>
