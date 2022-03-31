@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Aquesta línia de codi: Math.ceil((Math.random() * 10)); Retorna un número entre el 0 i el 10 de forma aleatòria.
+
+        L’exercici consisteix a què l’usuari ha d'endevinar el número escollit aleatòriament pel programa.
+
+    </p>
+    <p>
+        El programa, demana números a l’usuari fins que aquest encerti el número aleatori generat pel programa.
+
+        Un cop l’usuari ha endevinat el número, es mostrarà per pantalla el següent missatge: “Enhorabona, el número era
+        X”
+
+    </p>
+
+    <form>
+        Valor1: <input type="text" id="val1"><br>
+        Valor2: <input type="text" id="val2"><br>
+        <button onclick="process()">Enviar</button>
+    </form>
+</body>
+<script>
+    function process() {
+        let val1 = document.getElementById("val1").value;
+        let val2 = document.getElementById("val2").value;
+        //  let suma = val1.val()
+        alert(parseInt(val1) + parseInt(val2));
+    }
+</script>
+
+</html>

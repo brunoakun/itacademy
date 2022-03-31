@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        El programa demana dos números enters i llavors calcula la suma dels valors compresos entre els dos números,
+        inclosos.
+
+    </p>
+    <p>
+        Exemple: 4 i 6 --> resultat = 4 + 5 + 6 = 15
+    </p>
+
+    <form>
+        Valor1: <input type="text" id="val1"><br>
+        Valor2: <input type="text" id="val2"><br>
+        <button onclick="process()">Enviar</button>
+    </form>
+</body>
+<script>
+    function process() {
+        let val1 = document.getElementById("val1").value;
+        let val2 = document.getElementById("val2").value;
+        //  let suma = val1.val()
+        alert(parseInt(val1) + parseInt(val2));
+    }
+</script>
+
+</html>
