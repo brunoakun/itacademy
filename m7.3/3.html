@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>(M7.3.) Exercici 3 </h1>
+    <p>
+        L’usuari ha d’introduir una frase i el programa ha de dir si la frase és un palíndrom.<br>
+        Palabra o expresión que es igual si se lee de izquierda a derecha que de derecha a izquierda.
+
+    </p>
+    <hr>
+    <div id="lin"></div>
+    </p>
+
+    <script>
+        let palabra = prompt("Entra una palabra: ");
+        let divLin = document.getElementById("lin");
+
+        divLin.innerHTML = esPalindormo(palabra);
+
+        function esPalindormo(texto) {
+            let alReves = reverse(texto);
+            let resultado = "Es Palíndromo";
+            let long = texto.length;
+            let letraIzq = "";
+            let letraDer = "";
+
+            for (i = 0; i <= long; i++) {
+                letraIzq = texto.charAt(i);
+                letraDer = alReves.charAt(i);
+                if (letraIzq != letraDer) {
+                    resultado = "No es Palíndromo";
+                    break
+                }
+            }
+            return ("<h2>" + resultado + "</h2>");
+        }
+
+        function reverse(s) {
+            return s.split("").reverse().join("");
+        }
+    </script>
+</body>
+
+</html>
