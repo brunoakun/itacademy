@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Crea un programa on l’usuari introdueix tres notes i el programa calculi la mitja. <br>
+        Si la mitja és inferior a 5 ha de mostrar el següent missatge per pantalla: “No has superat el curs. Has de<br>
+        recuperar”, si la mitja està entre 5 i 7 ha de mostrar: “Enhorabona! Has aprovat però hauries de seguir<br>
+        practicant”, si la mitja és superior a 7 ha de mostrar: ”Enhorabona! Has superat el curs! Passa ja al
+        següent<br>
+        nivell!<br>
+    </p>
+
+    <script>
+        let nota1 = parseInt(prompt("Nota1:"));
+        let nota2 = parseInt(prompt("Nota2:"));
+        let nota3 = parseInt(prompt("Nota3:"));
+        let media = 0;
+        let resultado = "";
+
+        media = parseInt((nota1 + nota2 + nota3) / 3);
+        resultado = "Media: " + media + "\n";
+        if (media < 5) resultado += "No has superat el curs. Has de recuperar";
+        if (media >= 5 && media <= 7) resultado += "Enhorabona! Has aprovat però hauries de seguir practicant";
+        if (media > 7) resultado += "Enhorabona! Has superat el curs! Passa ja al següent nivell!";
+
+        alert(resultado);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Enunciado:</h1>
+    <p>
+        Fes un programa que mostri el següent per pantalla:
+        <br>
+        * * * * * *
+        <br>
+        * * * * *
+        <br>
+        * * * *
+        <br>
+        * * *
+        <br>
+        * *
+        <br>
+        *
+        <br>
+        El nombre de línies formades per “*” vindrà donat per un número que l’usuari introduirà per teclat.
+        <br>
+        Condició: En tot el codi del programa només hi pot haver un *
+        <br>
+        També, a poder ser, no utilitzis cap mètode com repeat() o substring() de la classe String
+        <hr>
+        <br>
+        <br>
+    <div id="lin"></div>
+    </p>
+
+    <script>
+        let lineas = parseInt(prompt("Lineas: "));
+        let conta = 0;
+        let tira = "";
+        let resultado = "";
+        divLin = document.getElementById("lin");
+
+        while (conta < lineas) {
+            tira = tira + "*";
+            resultado = resultado + tira + "<br>";
+            conta++;
+        }
+        divLin.innerHTML = resultado;
+    </script>
+</body>
+
+</html>
