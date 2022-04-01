@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>(M7.2.) Exercici 8 </h1>
+    <p>
+        L’usuari introdueix un nombre per teclat i el programa crida a un mètode que ha de mostrar la successió de
+        Fibonacci.
+        <br>
+        Exemple:
+        <br>
+        Si l’usuari introdueix el 10 el resultat ha de ser:
+        <br>
+        0,1,1,2,3,5,8,13,21,34
+        <hr>
+    <div id="lin"></div>
+    </p>
+
+    <script>
+        let numero = parseInt(prompt("Entra el número entero de repeticiones: "));
+        let divLin = document.getElementById("lin");
+
+        divLin.innerHTML = fibona(numero);
+
+        function fibona(cantidad) {
+            let resultado = "";
+            var arrRes = [0, 1];
+            for (i = 2; i <= cantidad + 1; i++) {
+                arrRes.push(arrRes[i - 1] + arrRes[i - 2]);
+                resultado = resultado + (arrRes[i] + ", ");
+            }
+            return (resultado);
+        }
+
+    </script>
+</body>
+
+</html>
