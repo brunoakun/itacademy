@@ -20,16 +20,26 @@
     </p>
     <hr>
 
-    <form>
-        <input type="text" id="palabra">
-        <button onclick="process()">Enviar</button>
-    </form>
+    Nº de palabras: <input type="text" id="cantidad">
+    <button onclick="process()">Enviar</button>
+
+    <div id="divResultado"></div>
+
 </body>
 <script>
-    function process(){
-        var array;
-        array="";
-        alert(array);
+    function process() {
+        let divResultado = document.getElementById("divResultado");
+        let resultado = "";
+        let palabras = [];
+        let cantidad = document.getElementById("cantidad").value;
+        
+        for (i = 1; i <= cantidad; i++) {
+            palabras[i] = prompt("Entra la palabra Nº" + i);
+            resultado += palabras[i] + "<br>";
+        }
+        divResultado.innerHTML = "<h2>"+resultado+"</h2>";
+        
     }
 </script>
+
 </html>
