@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M7.3.) Exercici 7 </h1>
+    <p>
+        Un grup d’amics ha quedat per fer una fideuà, els ingredients principals seran: fideus, gambes, i calamars.<br>
+        Saben que per cada quatre persones han d’utilitzar mig quilo de fideus, 400 grams de calamars i 200 grams de
+        gambes.<br>
+        S’ha de fer un programa que demani per pantalla el preu per quilo de cada ingredient i el nombre d’amics
+        que seran per dinar. <br>
+        El programa ha de calcular les quantitats necessàries de cada ingredient, el preu per
+        persona i el preu final de la fideuà
+    </p>
+    <hr>
+    <div id="lin"></div>
+    </p>
+    <form>
+        PRECIO de fideos: <input type="number" id="pvpFideos"><br>
+        PRECIO de gambas: <input type="number" id="pvpGambas"><br>
+        PRECIO de calamar: <input type="number" id="pvpCalamar"><br><br>
+        Número de personas: <input type="number" id="personas"><br>
+    </form>
+    <div class="resultado"></div>
+
+    <script>
+        let divResultado = document.getElementById("resultado");
+        let resultado = "";
+        let divLin = document.getElementById("lin");
+        let pvpFideos = document.getElementById("pvpFideos");
+
+        resultado = calcula(pvpFideos);
+        divResultado.innerHTML = resultado;
+
+        function calcula(texto) {
+            alert(texto);
+            let resultado = texto + " son minúsculas";
+            return ("<h2>" + resultado + "</h2>");
+        }
+
+    </script>
+</body>
+
+</html>

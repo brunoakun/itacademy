@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M7.2) Exercici 3</h1>
+    <div id="enunciado">
+        <p>
+            Fes un programa que mostri el següent per pantalla:<br>
+            <br>
+            *<br>
+            * *<br>
+            * * *<br>
+            * * * *<br>
+            * * * * *<br>
+            * * * * * *<br>
+            * * * * *<br>
+            * * * *<br>
+            * * *<br>
+            * *<br>
+            *<br>
+            La línea amb més “*” vindrà donada per un número que l’usuari introduirà per teclat.<br>
+            Condició: En tot el codi del programa només hi pot haver-hi dos *<br>
+            També, a poder ser, no utilitzis cap mètode com repeat() o substring() de la classe String
+        </p>
+    </div>
+    <hr>
+    <div id="divResultado"></div>
+
+    <script>
+        let lineas = parseInt(prompt("Entra el núm. máximo de caracteres"));
+        let divResultado = document.getElementById("divResultado");
+        let resultado = "";
+
+        for (i = 1; i <= lineas; i++) {
+            resultado += "*".repeat(i) + "<br>";
+        }
+        for (i = lineas; i <= 1; i--) {
+            resultado += "*".repeat(i) + "<br>";
+        }
+        divResultado.innerHTML = resultado;
+
+    </script>
+</body>
+
+</html>

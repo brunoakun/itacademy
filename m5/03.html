@@ -22,23 +22,23 @@
         </p>
         <hr>
     </div>
-    <form>
-        <p>Entra un número:</p>
-        <input type="number" id="numero">
-        <button type="submit" onclick="consulta()">enviar</button>
-    </form>
+    <p>Entra un número:</p>
+    <input type="number" id="numero">
+    <button type="submit" onclick="consulta()">enviar</button>
     <div id="resultado"> </div>
 
     <script>
+        let resultado = "";
         let divResultado = document.getElementById("resultado");
-        let numero = parseInt(document.getElementById("numero"));
         let numRandom = Math.ceil((Math.random() * 10));
+
         // numRandom = 4;
 
-        resultado = "numero=" + numero + " numRandom=" + numRandom;
-        divResultado.innerHTML = resultado;
-
         function consulta() {
+            let numero = document.getElementById("numero").value;
+            resultado = "numero=" + numero + " numRandom=" + numRandom;
+            divResultado.innerHTML = resultado;
+
             if (numRandom == numero) {
                 alert("Perfecto, ese es el número");
             } else {
