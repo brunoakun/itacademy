@@ -20,17 +20,25 @@
     <hr>
 
     <form>
-        Valor1: <input type="text" id="val1"><br>
-        Valor2: <input type="text" id="val2"><br>
-        <button onclick="process()">Enviar</button>
+        Desde: <input type="text" id="desde"><br>
+        Hasta: <input type="text" id="hasta"><br><br>
+        <button onclick="process()">Calcular</button>
     </form>
 </body>
 <script>
     function process() {
-        let val1 = document.getElementById("val1").value;
-        let val2 = document.getElementById("val2").value;
+        let desde = document.getElementById("desde").value;
+        let hasta = document.getElementById("hasta").value;
+        let resultado = "";
+        let total = 0;
         //  let suma = val1.val()
-        alert(parseInt(val1) + parseInt(val2));
+        for (i = desde; i <= hasta; i++) {
+            resultado += i;
+            if(i != hasta) resultado += " + ";
+            total = parseInt(total + i);
+        }
+
+        alert(resultado + " = " + total);
     }
 </script>
 
