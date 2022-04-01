@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Itacademy FDLP</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>(M3) Exercici 3_ex2 </h1>
+    <div id="enunciado">
+        <p>
+            Escriu un programa JavaScript que calculi els litres de pintura necessaris per a pintar una paret
+            rectangular.<br>
+            Un litre de pintura cobreix aproximadament, 12m2 en una sola mà.<br>
+            Crea una constant anomenada coberturaLitre per a guardar la dada de cobertura de la pintura (12m2)<br>
+            Hauràs de demanar a l'usuari:<br>
+            <br>
+            - L'alt i ample de la paret ( multiplicant sabràs l'àrea de la mateixa )<br>
+            - El nombre de mans a aplicar<br>
+            Mostra en pantalla els litres de pintura a utilitzar.<br>
+        </p>
+        <hr>
+    </div>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let ancho = parseInt(prompt("Entra el ancho de la pared: "));
+        let alto = parseInt(prompt("Entra el alto de la pared: "));
+        let capas = parseInt(prompt("Cuantas capas de pintura? "));
+
+        let area = parseInt(ancho * alto) * capas;
+        let litros = parseFloat(area / 12);
+
+        resultado += "<h2>Area a pintar: " + area + "</h2>";
+        resultado += "Litos " + parseInt(litros);
+
+        divResultado.innerHTML = resultado; 
+    </script>
+</body>
+
+</html>

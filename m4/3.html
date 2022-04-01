@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Itacademy FDLP</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>(M4) Exercici 3</h1>
+    <div id="enunciado">
+        <p>
+            Una escola d’idiomes concedeix beques a futurs estudiants si compleixen una sèrie de requisits.<br>
+            A l'alumne se li assigna una beca si és major d’edat i si té un títol universitari. O també se li assigna
+            una beca si l’alumne està a l’atur. <br>
+            El programa demana les tres dades per pantalla i en finalitzar mostra si l’alumne té la beca o no.
+        </p>
+        <hr>
+    </div>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let mayor = confirm("¿Eres mayor de edad?");
+        let universidad = confirm("títol universitari?");
+        let parado = confirm("Estás en paro?");
+
+        resultado = "<h2>Beca NO concedida</h2>";
+        if (mayor && universidad) resultado = "<h2>Beca SI concedida</h2>";
+        if (parado) resultado = "<h2>Beca SI concedida</h2>";
+
+        divResultado.innerHTML = resultado; 
+    </script>
+</body>
+
+</html>

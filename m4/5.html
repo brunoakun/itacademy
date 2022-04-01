@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Itacademy FDLP</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>(M4) Exercici 5</h1>
+    <div id="enunciado">
+        <p>
+            Fer un programa que demani dos números i un operador(+,-,*,/).<br>
+            Al final, el programa ha d'imprimir per pantalla el resultat de fer l’operació que contingui la variable
+            operador.
+        </p>
+        <hr>
+    </div>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let num1 = parseInt(prompt("Entra número 1: "));
+        let num2 = parseInt(prompt("Entra número 2: "));
+        let operador = prompt("Entra operador(+,-,*,/): ");
+
+        switch (operador) {
+            case '+':
+                resultado = num1 + num2;
+                break;
+            case '-':
+                resultado = num1 - num2;
+                break;
+            case '*':
+                resultado = num1 * num2;
+                break;
+            case '/':
+                resultado = num1 / num2;
+                break;
+            default:
+                resultado = "Operador NO válido";
+        }
+
+        divResultado.innerHTML = resultado; 
+    </script>
+</body>
+
+</html>

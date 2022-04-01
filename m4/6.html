@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Itacademy FDLP</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>(M4) Exercici 6</h1>
+    <div id="enunciado">
+        <p>
+            Fer un programa que demani a l’usuari quin dia i quin mes va néixer, amb aquesta informació el programa
+            mostra per pantalla, de quin signe del zodíac és.<br>
+        </p>
+        <hr>
+    </div>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let dia = parseInt(prompt("Día de nacimineto: "));
+        let mes = parseInt(prompt("Mes de nacimineto: "));
+
+        if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4)) resultado = 'Aries';
+        if ((dia >= 24 && mes == 9) || (dia <= 23 && mes == 10)) resultado = 'Libra';
+        if ((dia >= 21 && mes == 4) || (dia <= 21 && mes == 5)) resultado = 'Tauro';
+        if ((dia >= 24 && mes == 10) || (dia <= 22 && mes == 11)) resultado = 'Escorpio';
+        if ((dia >= 22 && mes == 5) || (dia <= 21 && mes == 6)) resultado = 'G\u00E9minis';
+        if ((dia >= 23 && mes == 11) || (dia <= 21 && mes == 12)) resultado = 'Sagitario';
+        if ((dia >= 21 && mes == 6) || (dia <= 23 && mes == 7)) resultado = 'C\u00E1ncer';
+        if ((dia >= 22 && mes == 12) || (dia <= 20 && mes == 1)) resultado = 'Capricornio';
+        if ((dia >= 24 && mes == 7) || (dia <= 23 && mes == 8)) resultado = 'Leo';
+        if ((dia >= 21 && mes == 1) || (dia <= 19 && mes == 2)) resultado = 'Acuario';
+        if ((dia >= 24 && mes == 8) || (dia <= 23 && mes == 9)) resultado = 'Virgo';
+        if ((dia >= 20 && mes == 2) || (dia <= 20 && mes == 3)) resultado = 'Piscis';
+
+        divResultado.innerHTML = "<h1>" + resultado + "</h1>"; 
+    </script>
+</body>
+
+</html>

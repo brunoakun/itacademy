@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Itacademy FDLP</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>(M3) Exercici 3_ex1 </h1>
+    <div id="enunciado">
+        <p>
+            Escriu un programa JavaScript que llegeix un nombre i mostra per pantalla el doble i el triple d'aquest
+            número.
+        </p>
+        <hr>
+    </div>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let num1 = parseInt(prompt("Entra un número: "));
+
+        resultado += "<h2>Número: " + num1 + "</h2>";
+        resultado += "El dóble es " + parseInt(num1 * 2) + "<br>";
+        resultado += "El trple es " + parseInt(num1 * 3) + "<br>";
+
+        divResultado.innerHTML = resultado; 
+    </script>
+</body>
+
+</html>
