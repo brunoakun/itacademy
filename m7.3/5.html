@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>(M7.3.) Exercici 1 </h1>
+    <p>
+        Comprovar si una frase introduïda per l’usuari està formada només per minúscules, només per majúscules o per
+        minúscules i majúscules
+    </p>
+    <hr>
+    <div id="lin"></div>
+    </p>
+
+    <script>
+        let frase = prompt("Entra una frase: ");
+        let divLin = document.getElementById("lin");
+
+        divLin.innerHTML = letras(frase);
+
+        function letras(texto) {
+            let resultado = "";
+            let long = texto.length;
+            let may = 0;
+            let min = 0;
+            let i = 0;
+            for (i = 0; i < long; i++) {
+                letra = texto.charAt(i);
+                console.log(letra);
+                if (letra == letra.toUpperCase()) may++;
+                if (letra == letra.toLowerCase()) min++;
+            }
+            resultado = "En la frase '"+frase+"'  hay " + long + " letras<br>";
+            resultado += may + " son mayúsculas<br>";
+            resultado += min + " son minúsculas";
+            return ("<h2>" + resultado + "</h2>");
+        }
+
+    </script>
+</body>
+
+</html>

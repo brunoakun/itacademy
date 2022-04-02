@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>(M7.2.) Exercici 5 </h1>
+    <p>
+        L’usuari introdueix un nombre per teclat i el programa crida a un mètode que indiqui si el número és primer o
+        no.
+    <div id="lin"></div>
+    </p>
+
+    <script>
+        let numero = parseInt(prompt("Entra un número entero: "));
+        let divLin = document.getElementById("lin");
+
+        divLin.innerHTML = esPrimo(numero);
+
+        function esPrimo(num) {
+            let i = 2;
+            let resultado = num + "\n es primo";
+            while (i < num) {
+                if (num % i === 0) resultado = num + "\n NO es primo";
+                i++;
+            }
+            return (resultado);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>(M7.3.) Exercici 1 </h1>
+    <p>
+        Realitzar un programa que tingui un menú on se li mostraran 4 opcions a l’usuari per pantalla:
+        <br>
+        1.- Quadrat
+        <br>
+        2.- Triangle<br>
+        3.- Rectangle<br>
+        4.- Cercle<br>
+        Segons l’opció escollida haurà d’introduir unes dades o altres perquè el programa mostri per pantalla l’àrea (el
+        valor) del polígon escollit
+        <hr>
+    <div id="lin"></div>
+    </p>
+
+    <script>
+        let opcion = parseInt(prompt("Entra una opción:\n1.Cuadrado\n2.-Triángulo\n3.-Rectánmgulo\n4.-Círculo "));
+        let divLin = document.getElementById("lin");
+
+        divLin.innerHTML = area(opcion);
+
+        function area(tipo) {
+            let resultado = '';
+            switch (tipo) {
+                case 1:
+                    // cuadrado
+                    let lado = parseInt(prompt("Entra un lado del cuadrado: "));
+                    resultado = "El área del cuadrado es: " + parseFloat(lado * lado);
+                    break;
+                case 2:
+                    // triangulo                    
+                    resultado = "El área del triángilo es: ";
+                    break;
+                case 3:
+                    // rectángulo
+                    let base = parseInt(prompt("Entra la base del rectángulo: "));
+                    let altura = parseInt(prompt("Entra la altura del rectángulo: "));
+                    resultado = "El área del rectángulo es: " + parseFloat(base * altura);
+                    break;
+                case 4:
+                    // círculo
+                    let radio = parseInt(prompt("Entra el rádio del círculo: "));
+                    resultado = "El área del círculo es: " + parseFloat(Math.PI * radio);
+                    break;
+                default:
+                    resultado = "Opción NO válida..!";
+            }
+            return ("<h2>" + resultado + "</h2>");
+
+        }
+
+    </script>
+</body>
+
+</html>
