@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>itacademy</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>(M7.2.) Exercici 6 </h1>
+    <div id="enunciado">
+        <p>
+            En aquest programa l’usuari ha d’introduir un string i, utilitzant un bucle for, el programa ha de mostrar
+            l’string al revés
+        </p>
+    </div>
+    <hr>
+
+    <script>
+        let palabra = prompt("Entra una palabra");
+        let resultado = [];
+
+        for (i = 0; i < palabra.length; i++) {
+            letra = palabra[i];
+            resultado[palabra.length - i] = letra;
+        }
+        alert(resultado);
+    </script>
+</body>
+
+</html>
