@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ejercicio M3-1</title>
+	<meta charset='utf-8'>
+</head>
+
+<body>
+	<h1>(M3) Exercici 1 </h1>
+	<div id="enunciado">
+		<p>
+			Fer un programa que li demani a l’usuari mitjançant el prompt: El nom, el cognom i l’edat de l’usuari.<br>
+			Un
+			cop l’usuari hagi acabat d’introduir les dades, aquestes s’han de mostrar per consola, amb un popup i
+			mitjançant getElementById().
+		</p>
+		<hr>
+	</div>
+	<div id="resultado"> </div>
+
+	<script>
+		let resultado = "";
+		let divResultado = document.getElementById("resultado");
+		let nombre = prompt("Entra una Nombre: ");
+		let edad = prompt("Entra una edad: ");
+
+		console.log("Nombre: " + nombre + "\nEdad: " + edad);				// 1.- Mostrar por cónsola
+		alert("Nombre: " + nombre + "\nEdad: " + edad);					// 2.- amb un popup i mitjançant getElementById().
+		divResultado.innerHTML = "Nombre: " + nombre + "<br>Edad: " + edad;	// 3.- mitjançant getElementById().
+	</script>
+</body>
+
+</html>

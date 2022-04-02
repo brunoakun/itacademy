@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M7.1) Exercici 5</h1>
+    <div id="enunciado">
+        <p>
+            Mostra per pantalla els nombres parells compresos entre el 100 i el 0 en ordre descendent.
+        </p>
+    </div>
+    <hr>
+    <div id="divResultado"></div>
+
+    <script>
+        let divResultado = document.getElementById("divResultado");
+        let resultado = "";
+        for (i = 100; i > 0; i--) {
+            if (i % 2 == 0) {
+                resultado += i + "<br>";
+            }
+        }
+        divResultado.innerHTML = resultado;
+    </script>
+</body>
+
+</html>

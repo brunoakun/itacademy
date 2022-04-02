@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Itacademy FDLP</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>(M3) Exercici 2 </h1>
+    <div id="enunciado">
+        <p>
+            Aquest programa li demana l’edat a l’usuari, en funció d’aquesta, mostrarem un dels següents missatges per
+            pantalla: <br>
+            Si té 5 anys o menys: preescolar <br>
+            Si té entre 6 i 11 anys: primària <br>
+            Si té entre 12 i 15: ESO <br>
+            Si té entre 16 i 17: Batxillerat <br>
+            Si és major d'edat: FP o Universitat <br>
+        </p>
+        <hr>
+    </div>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let edad = parseInt(prompt("Entra tú edad: "));
+
+
+        resultado += "<h2>Tu edad es: " + edad + "</h2>";
+        if (edad <= 5) resultado += "preescolar<br>";
+        if (edad >= 6 && edad <= 11) resultado += "primària<br>";
+        if (edad >= 12 && edad <= 15) resultado += "ESO<br>";
+        if (edad >= 16 && edad <= 17) resultado += "Batxillerat<br>";
+        if (edad >= 18) resultado += "FP o Universitat<br>";
+
+        divResultado.innerHTML = resultado; 
+    </script>
+</body>
+
+</html>

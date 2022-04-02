@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ejercicio itacademy</title>
+	<meta charset='utf-8'>
+</head>
+
+<body>
+	<h1>(M4) Exercici 4 </h1>
+	<div id="enunciado">
+		<p>
+			Modifica l’exercici 1 del mòdul 3. Un cop introduïdes les dades, el programa ha de mostrar el següent per
+			pantalla:<br>
+			- Si l’usuari té 18 anys o més: “Nom Cognom, ets MAJOR d’edat” <br>
+			- Si l’usuari és menor de 18 anys: “Nom Cognom, ets MENOR d’edat”.<br>
+		</p>
+		<hr>
+	</div>
+	<div id="resultado"> </div>
+
+	<script>
+		let resultado = "";
+		let divResultado = document.getElementById("resultado");
+		let nombre = prompt("Entra una Nombre: ");
+		let edad = prompt("Entra una edad: ");
+
+		resultado = nombre + " Ets MAJOR d’edat";
+		if (edad < 18) resultado = nombre + " Ets MENOR d’edat";
+
+		console.log(resultado);				// 1.- Mostrar por cónsola
+		alert(resultado);					// 2.- amb un popup i mitjançant getElementById().
+		divResultado.innerHTML = resultado;	// 3.- mitjançant getElementById().
+	</script>
+</body>
+
+</html>

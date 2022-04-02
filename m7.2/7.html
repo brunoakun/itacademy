@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M7.2) Exercici 7</h1>
+    <div id="enunciado">
+        <p>
+            L’usuari introdueix un any a per teclat<br>
+            i el programa crida a un mètode que indiqui l’any és de traspàs o no.<br><br>
+            <img src="Bisiesto.jpg" width="300">
+        </p>
+    </div>
+    <hr>
+    <div id="divResultado"></div>
+
+    <script>
+        let ano = parseInt(prompt("Entra el año:"));
+        let divResultado = document.getElementById("divResultado");
+        let resultado = "";
+        flag = true;
+
+        if (ano % 400 == 0) {
+            resultado = "Es Bisiesto";
+            flag = false;
+        }
+        if (flag == true && (ano % 400 == 0) && (ano % 100 != 0)) {
+            resultado = "Es Bisiesto";
+            flag = false;
+        }
+        if (flag == true) resultado = "NO Es Bisiesto";
+
+        divResultado.innerHTML = resultado;
+
+    </script>
+</body>
+
+</html>

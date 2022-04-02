@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M7.1) Exercici 7</h1>
+    <div id="enunciado">
+        <p>
+            Fer un programa on l’usuari introdueix per pantalla un caràcter i un número.<br>
+            El programa imprimeix per
+            pantalla un quadrat amb la mida i el caràcter introduïts per l’usuari.<br><br>
+            Exemple:<br>
+            % % % % %<br>
+            % % % % %<br>
+            % % % % %<br>
+            % % % % %<br>
+            % % % % %<br>
+        </p>
+    </div>
+    <hr>
+    <div id="divResultado"></div>
+
+    <script>
+        let numero = parseInt(prompt("Entra un entero del 1 al 10"));
+        let caracter = prompt("Entra un caracter a repetir");
+        let divResultado = document.getElementById("divResultado");
+        let resultado = "";
+
+        if (numero < 1 || numero > 10) {
+            resultado = "<h2> El número ha de ser entre 1 y 10</h2>";
+        } else {
+            for (i = 1; i <= numero; i++) {
+                resultado += caracter.repeat(numero) + "<br>";
+            }
+        }
+        divResultado.innerHTML = resultado;
+    </script>
+</body>
+
+</html>

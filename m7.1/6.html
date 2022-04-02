@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M7.1) Exercici 6</h1>
+    <div id="enunciado">
+        <p>
+            Taula de multiplicar. L’usuari introduirà un número (del 1 al 10) per pantalla, i utilitzant un bucle, el
+            programa li mostrarà la taula de multiplicar d’aquell número.<br>
+            Exemple:<br>
+
+            2 x 1 = 2<br>
+            2 x 2 = 4<br>
+            2 x 3 = 6<br>
+            ...<br>
+            2 x 10 = 20
+        </p>
+    </div>
+    <hr>
+    <div id="divResultado"></div>
+
+    <script>
+        let numero = parseInt(prompt("Entra un entero del 1 al 10"));
+        let divResultado = document.getElementById("divResultado");
+        let resultado = "";
+
+        if (numero < 1 || numero > 10) {
+            resultado = "<h2> El número ha de ser entre 1 y 10</h2>";
+        } else {
+            for (i = 1; i <= 10; i++) {
+                resultado += numero + " x " + i + " = " + parseInt(numero * i) + "<br>";
+            }
+        }
+        divResultado.innerHTML = resultado;
+    </script>
+</body>
+
+</html>

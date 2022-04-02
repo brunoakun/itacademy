@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M7.3.) Exercici 7 </h1>
+    <p>
+        Un grup d’amics ha quedat per fer una fideuà, els ingredients principals seran: fideus, gambes, i calamars.<br>
+        Saben que per cada quatre persones han d’utilitzar mig quilo de fideus, 400 grams de calamars i 200 grams de
+        gambes.<br>
+        S’ha de fer un programa que demani per pantalla el preu per quilo de cada ingredient i el nombre d’amics
+        que seran per dinar. <br>
+        El programa ha de calcular les quantitats necessàries de cada ingredient, el preu per
+        persona i el preu final de la fideuà
+    </p>
+    <hr>
+    <div id="lin"></div>
+    </p>
+    PRECIO Kg. de fideos: <input type="number" id="fideos"><br>
+    PRECIO Kg. de gambas: <input type="number" id="gambas"><br>
+    PRECIO Kg. de calamar: <input type="number" id="calamar"><br><br>
+    Número de amigos que comerán fideuá: <input type="number" id="personas"><br>
+    <input type="button" onclick="calcula()" value="enviar"><br><br>
+
+    <div id="resultado"></div>
+
+    <script>
+
+
+        function calcula() {
+            let divResultado = document.getElementById("resultado");
+            let resultado = "";
+
+            let totalFideos = 0;
+            let totalGambas = 0;
+            let totalCalamar = 0;
+
+            let precioTotal = 0;
+
+            let fideos = document.getElementById("fideos").value;
+            let gambas = document.getElementById("gambas").value;
+            let calamar = document.getElementById("calamar").value;
+            let personas = document.getElementById("personas").value;
+
+            totalFideos = (personas * 500);
+            totalCalamar = (personas * 400);
+            totalGambas = (personas * 200);
+
+            precioTotal += parseFloat((totalFideos * fideos) / 1000);
+            precioTotal += parseFloat((totalCalamar * fideos) / 1000);
+            precioTotal += parseFloat((totalGambas * fideos) / 1000);
+
+
+            resultado += "<b>Cantidad de fideos:</b> " + totalFideos + " gr.<br>";
+            resultado += "<b>Cantidad de calamar:</b> " + totalCalamar + " gr.<br>";
+            resultado += "<b>Cantidad de gambas: </b>" + totalGambas + " gr.<br>";
+            resultado += "<br>";
+            resultado += "<b>Precio de los ingrdientes: </b>" + precioTotal + " €<br>";
+            resultado += "<b>Precio por persona: </b>" + parseFloat(precioTotal/personas) + " €<br>";
+
+
+            divResultado.innerHTML = resultado;
+        }
+
+    </script>
+</body>
+
+</html>
