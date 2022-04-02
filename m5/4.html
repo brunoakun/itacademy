@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M5) Exercici 4</h1>
+    <div id="enunciado">
+        <p>
+            Has de modificar el programa anterior per afegir una nova funcionalitat: establir un número màxim de 5
+            intents.<br>
+            Si l’usuari encerta el número escollit pel programa abans d'aquests 5 intents, el programa mostra el següent
+            missatge per pantalla: “Enhorabona, el número és X i has necessitat Y intents per encertar-lo”.<br>
+            Si no encerta el número abans de 5 intents, el programa mostra per pentalla: "Has utilitzat massa intents!
+            El número és X ".
+        </p>
+        <hr>
+    </div>
+    <p>Entra un número:</p>
+    <input type="number" id="numero">
+    <button type="submit" onclick="main()">enviar</button>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let numRandom = Math.ceil((Math.random() * 10));
+        let conta = localStorage.getItem("contam4_4");
+        if (!conta) localStorage.setItem("contam4_4", "0");
+
+        // numRandom = 4;
+
+        function main() {
+            if (conta == 5) {
+                alert("Número máximo de intentos!");
+                localStorage.setItem("contam4_4", "0");
+
+            } else {
+                consulta();
+                conta++;
+                localStorage.setItem("contam4_4", conta);
+            }
+
+        }
+
+        function consulta() {
+            let numero = document.getElementById("numero").value;
+            resultado = "numero=" + numero + " numRandom=" + numRandom;
+            divResultado.innerHTML = resultado;
+
+            if (numRandom == numero) {
+                alert("Perfecto, ese es el número");
+            } else {
+                alert(numero + " No, vuleve a intentarlo, es el " + numRandom);
+            }
+        } 
+    </script>
+
+</body>
+
+</html>
