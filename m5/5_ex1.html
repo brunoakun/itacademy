@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M5) Exercici EXTRA 1
+    </h1>
+    <div id="enunciado">
+        <p>
+            Realitzar un joc per endevinar un nombre aleatori N, entre 1 i 500.<br>
+            Si la distància entre el nombre a endevinar i el de l'usuari és de 50 o més, el programa haurà de dir:<br>
+            “Fred, fred: el teu número és més gran “ o “Fred, fred: el teu número és més petit “<br>
+            <br>
+            Si la distància entre el nombre a endevinar i el de l'usuari està entre 15 i 50, el programa haurà de
+            dir:<br>
+            “Tebi, Tebi: el teu número és més gran “ o “Tebi, Tebi: el teu número és més petit “ <br>
+            <br>
+            I si la distància entre el nombre a endevinar i el de l'usuari i si la distància és menor a 15, el programa
+            haurà de dir:<br>
+            “Calent, calent: el teu número és més gran “ o “Calent, calent: el teu número és més petit “
+        </p>
+        <hr>
+    </div>
+    <p>Entra un número entre 1 y 500:</p>
+    <input type="number" id="numero">
+    <button type="submit" onclick="calcula()">enviar</button>
+    <div id="resultado"> </div>
+
+    <script>
+        let resultado = "";
+        let divResultado = document.getElementById("resultado");
+        let numRandom = Math.ceil((Math.random() * 10));
+        let conta = localStorage.getItem("contam4_4");
+        if (!conta) localStorage.setItem("contam4_4", "0");
+
+        // numRandom = 4; 
+
+        function calcula() {
+            let numero = document.getElementById("numero").value;
+            resultado = "numero=" + numero + " numRandom=" + numRandom;
+            divResultado.innerHTML = resultado;
+
+            if (numero < 1 || numero > 500) {
+                alert("El numero " + numero + " NO está entre 1 y 500");
+            } else {
+                if (numRandom == numero) alert("PERFECTO, ese era el número random");
+                if (numRandom - 50 <= numero) alert("Fred, fred: el teu número és més petit ");
+                if (numRandom + 50 <= numero) alert("Fred, fred: el teu número és més gran ");
+                if (numRandom - 15 <= numero) alert("Calent, calent: el teu número és més petit ");
+                if (numRandom + 15 <= numero) alert("Calent, calent: el teu número és més gran ");
+            }
+        } 
+    </script>
+
+</body>
+
+</html>
