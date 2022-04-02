@@ -42,20 +42,35 @@
         // numRandom = 4; 
 
         function calcula() {
-            let numero = document.getElementById("numero").value;
+            flag = true;
+            let numero = parseInt(document.getElementById("numero").value);
             resultado = "numero=" + numero + " numRandom=" + numRandom;
             divResultado.innerHTML = resultado;
 
             if (numero < 1 || numero > 500) {
                 alert("El numero " + numero + " NO está entre 1 y 500");
             } else {
-                if (numRandom == numero) alert("PERFECTO, ese era el número random");
-                if (numRandom - 50 <= numero) alert("Fred, fred: el teu número és més petit ");
-                if (numRandom + 50 <= numero) alert("Fred, fred: el teu número és més gran ");
-                if (numRandom - 15 <= numero) alert("Calent, calent: el teu número és més petit ");
-                if (numRandom + 15 <= numero) alert("Calent, calent: el teu número és més gran ");
+                if (numRandom == numero) {
+                    alert("PERFECTO, ese era el número random");
+                    flag = false
+                }
+                if (flag && (numero < numRandom - 50)) {
+                    alert("Fred, fred: el teu número és més petit ");
+                    flag = false
+                }
+                if (flag && (numero > numRandom - 50)) {
+                    alert("Fred, fred: el teu número és més gran ");
+                    flag = false
+                }
+                if (flag && (numero < numRandom - 15)) {
+                    alert("Calent, calent: el teu número és més petit ");
+                    flag = false
+                }
+                if (flag && (numero > numRandom - 15)) {
+                    alert("Calent, calent: el teu número és més gran ");
+                }
             }
-        } 
+        }
     </script>
 
 </body>
