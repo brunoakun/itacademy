@@ -24,7 +24,7 @@
     </p>
 
     <script>
-        let numero = parseInt(prompt("Entra el número entero de repeticiones: "));
+        let numero = parseInt(prompt("Entra el número de veces que se calculará: "));
         let divLin = document.getElementById("lin");
 
         divLin.innerHTML = fibona(numero);
@@ -34,7 +34,8 @@
             var arrRes = [0, 1];
             for (i = 2; i <= cantidad + 1; i++) {
                 arrRes.push(arrRes[i - 1] + arrRes[i - 2]);
-                resultado = resultado + (arrRes[i] + ", ");
+                resultado = resultado + (arrRes[i]);
+                if (i != cantidad + 1) resultado += ", ";
             }
             return (resultado);
         }
