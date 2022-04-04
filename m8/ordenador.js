@@ -1,5 +1,5 @@
 class Ordenador {
-    // atributos de clase
+    // atributos de la clase Ordenador
     constructor(marca, modelo, cpu, ram, hd) {
         this.marca = marca;
         this.modelo = modelo;
@@ -8,7 +8,7 @@ class Ordenador {
         this.hd = hd;
     }
 
-    // Métodos de clase
+    // Métodos de la clase Ordenador
     getMarca() {
         return this.marca;
     }
@@ -18,7 +18,6 @@ class Ordenador {
     getCpu() {
         return this.cpu;
     }
-
     getNombre(nombre) {
         return ("En aquests moments s'està executant: " + nombre);
     }
