@@ -1,0 +1,46 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 6 - Calculo de la letra del DNI</title>
+
+</head>
+
+<body>
+    <h1>(M7.3.) Exercici 4</h1>
+    <p>Esta página calcula la letra del DNI</p>
+    <form>
+        <input type="button" value="Valida tu DNI" onclick="comprobarDNI()">
+    </form>
+
+    <script>
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+        var dni = prompt("Introduce tu número de DNI (con la letra)");
+
+
+
+        if ((dni.length != 9) || (isNaN(dni.charAt(8)) == false)) {
+            alert("El DNI proporcionado no es válido");
+        } else {
+            var numero = dni.substr(0, 8)
+            if (numero < 0 || numero > 99999999) {
+                alert("El número proporcionado no es válido");
+            } else {
+                var letra = dni.substr(8, 1);
+                letra = letra.toUpperCase();
+
+                var letraCalculada = letras[numero % 23];
+                if (letraCalculada != letra) {
+                    alert("La letra o el número proporcionados no son correctos");
+                    alert("La letra correcta de su DNI es: " + letraCalculada);
+                } else {
+                    alert("El número de DNI y su letra son correctos");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
