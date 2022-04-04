@@ -23,12 +23,13 @@ class Ordenador {
     }
 
     getDescipcion() {
-        let resultado = "";
-        resultado += ' marca:' + this.marca + "<br>";
-        resultado += ' modelo:' + this.modelo + "<br>";
-        resultado += ' cpu:' + this.cpu + "<br>";
-        resultado += ' ram:' + this.ram + "<br>";
-        resultado += ' hd:' + this.hd
+        let resultado = "<ul>";
+        resultado += '<li> marca:' + this.marca + "</li>";
+        resultado += '<li> modelo:' + this.modelo + "</li>";
+        resultado += '<li> cpu:' + this.cpu + "</li>";
+        resultado += '<li> ram:' + this.ram + "</li>";
+        resultado += '<li> hd:' + this.hd + "</li>";
+        resultado += '</ul>';
         return (resultado);
     }
 
