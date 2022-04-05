@@ -1,6 +1,5 @@
 //Classe usuari
-//Atributs: nom i edat
-
+//Atributs: nom, edad, email
 class Usuari {
 
     constructor(nom, edad, email = 'email@email.com') {
@@ -8,33 +7,20 @@ class Usuari {
         this._edad = edad;
         this._email = email;
     }
+
+
     //GETTERS i SETTERS
 
-    get nom() {
-        return this._nom;
-    }
+    get nom() { return this._nom; }
+    get edad() { return this._edad; }
+    get email() { return this._email; }
+    set edad(edad) { this._edad = edad; }
+    set nom(nom) { this._nom = nom; }
+    set email(email) { this._email = email; }
 
-    get edad() {
-        return this._edad;
-    }
-
-    get email() {
-        return this._email;
-    }
-
-    set edad(edad) {
-        this._edad = edad;
-    }
-
-    set nom(nom) {
-        this._nom = nom;
-    }
-
-    set email(email) {
-        this._email = email;
-    }
 
     // MÈTODES DE LA CLASSE
+
     incrementarEdad() {
         this._edad++;
     }
@@ -53,8 +39,6 @@ class Usuari {
         if (this._edad >= 18) ret = "Es Mayor de edad";
         return (ret)
     }
-
-
 
 }
 
