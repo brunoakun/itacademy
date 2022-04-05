@@ -13,3 +13,8 @@ let divResultado = document.getElementById("divResultado");
 alert(`marca del ordenador1 es ${ordenador1._marca}`);  // Usamos el getter
 divResultado.innerHTML = '<h1>ordenador1</h1>' + ordenador1.getDescipcion();
 divResultado2.innerHTML = '<h1>ordenador2</h1>' + ordenador2.getDescipcion();
+
+ordenador1._marca = "HP";
+ordenador1._hd="xx";
+
+alert(`marca del ordenador1 es ${ordenador1._hd}`);  // Usamos el getter

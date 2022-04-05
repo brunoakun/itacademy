@@ -9,19 +9,22 @@ class Ordenador {
     }
 
     // Getters y setters
+    /*
     get marca() {
         return this._marca;
     }
+    */
     get modelo() {
         return this._modelo;
     }
     get cpu() {
         return this._cpu;
     }
-
+/*
     set marca(marca) {
         this._marca = marca;
     }
+    */
     set modelo(modelo) {
         this._modelo = modelo;
     }
