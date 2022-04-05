@@ -76,5 +76,6 @@ console.log(usuari1);
 console.log(usuari1.mostrarInfo());
 console.log(usuari2.mostrarInfo());
 
+usuari1._edad = 5;
 console.log(usuari1.mayorDeEdad());
 console.log(usuari2.mayorDeEdad());
