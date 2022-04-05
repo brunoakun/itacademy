@@ -1,26 +1,17 @@
 //Classe Estudiante
 //Atributs: nom, edad, email, carrera
 
-class Estudiante {
+class Estudiante extends Usuari {
 
-    constructor(nom, edad, email, carrera) {
-        this._nom = nom;
-        this._edad = edad;
-        this._email = email;
-        this._carrera = carrera;
+    constructor(nom,edad,email,carrera) {
+        super(nom,edad,email);      // Hereda de la clase superior
+        this._carrera = carrera;    // Solo defino la nueva propiedad carrera
     }
 
 
     //GETTERS i SETTERS
 
-    get nom() { return this._nom; }
-    get edad() { return this._edad; }
-    get email() { return this._email; }
     get carrera() { return this._carrera; }
-
-    set nom(nom) { return this._nom = nom; }
-    set edad(edad) { return this._edad = edad; }
-    set email(email) { return this._email = email; }
     set carrera(carrera) { return this._carrera = carrera; }
 
 
