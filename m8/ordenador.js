@@ -1,6 +1,6 @@
 class Ordenador {
     // Atributos de la clase Ordenador
-    constructor(marca, modelo, cpu, ram, hd="HD por defecto") {
+    constructor(marca, modelo, cpu, ram, hd = "HD por defecto") {
         this._marca = marca;
         this._modelo = modelo;
         this._cpu = cpu;
@@ -8,31 +8,22 @@ class Ordenador {
         this._hd = hd;
     }
 
-    // Getters y setters
-    /*
-    get marca() {
-        return this._marca;
-    }
-    */
-    get modelo() {
-        return this._modelo;
-    }
-    get cpu() {
-        return this._cpu;
-    }
-/*
-    set marca(marca) {
-        this._marca = marca;
-    }
-    */
-    set modelo(modelo) {
-        this._modelo = modelo;
-    }
-    set cpu(cpu) {
-        this._cpu = cpu;
-    }
+    // GETTERS Y SETTERS
 
-    // Métodos de la clase Ordenador
+    get marca() { return this._marca; }
+    get modelo() { return this._modelo; }
+    get cpu() { return this._cpu; }
+    get ram() { return this._ram; }
+    get hd() { return this._hd; }
+
+    set marca(val) { this._marca = val; }
+    set modelo(val) { this._modelo = val; }
+    set cpu(val) { this._cpu = val; }
+    set ram(val) { this._ram = val; }
+    set hd(val) { this._hd = val; }
+
+    // ATRIBUTOS DE LA CLASE 
+
     getNombre(nombre) {
         return ("En aquests moments s'està executant: " + nombre);
     }
