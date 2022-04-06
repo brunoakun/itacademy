@@ -1,5 +1,6 @@
 class Ordenador {
-    // Atributos de la clase Ordenador
+
+    // ATRIBUTOS de la clase Ordenador
     constructor(marca, modelo, cpu, ram, hd = "HD por defecto") {
         this._marca = marca;
         this._modelo = modelo;
@@ -22,7 +23,8 @@ class Ordenador {
     set ram(val) { this._ram = val; }
     set hd(val) { this._hd = val; }
 
-    // ATRIBUTOS DE LA CLASE 
+    
+    // METODOS DE LA CLASE 
 
     getNombre(nombre) {
         return ("En aquests moments s'està executant: " + nombre);
@@ -30,11 +32,11 @@ class Ordenador {
 
     getDescipcion() {
         let resultado = "<ul>";
-        resultado += '<li> marca:' + this._marca + "</li>";
-        resultado += '<li> modelo:' + this._modelo + "</li>";
-        resultado += '<li> cpu:' + this._cpu + "</li>";
-        resultado += '<li> ram:' + this._ram + "</li>";
-        resultado += '<li> hd:' + this._hd + "</li>";
+        resultado += '<li> marca: ' + this._marca + "</li>";
+        resultado += '<li> modelo: ' + this._modelo + "</li>";
+        resultado += '<li> cpu: ' + this._cpu + "</li>";
+        resultado += '<li> ram: ' + this._ram + "</li>";
+        resultado += '<li> hd: ' + this._hd + "</li>";
         resultado += '</ul>';
         return (resultado);
     }
