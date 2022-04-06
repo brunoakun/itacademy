@@ -16,7 +16,7 @@ class Estudiante extends Usuari {
 
 
     // MÈTODES DE LA CLASSE
-
+    
     mostrarInfo() {
         return `
             Nombre: ${this._nom} 
@@ -25,6 +25,7 @@ class Estudiante extends Usuari {
             Carrera: ${this._carrera}
         `;
     }
+    
 }
 
 
