@@ -1,0 +1,13 @@
+"Class getter": {
+        "scope": "javascript",
+        "prefix": "gt",
+        "body": ["get ${1:prop}() {", "return this._${1:prop};", "}"],
+        "description": "Genera el getter para la propiedad de la clase"
+    },
+
+    "Class setter": {
+        "scope": "javascript",
+        "prefix": "st",
+        "body": ["set ${1:prop}(${1:prop}) {", "this._${1:prop} = ${1:prop};", "}"],
+        "description": "Genera el setter para la propiedad de la clase"
+    }
