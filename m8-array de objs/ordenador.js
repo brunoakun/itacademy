@@ -32,11 +32,11 @@ class Ordenador {
 
     getDescipcion() {
         let resultado = "<ul>";
-        resultado += '<li> marca: ' + this._marca + "</li>";
-        resultado += '<li> modelo: ' + this._modelo + "</li>";
-        resultado += '<li> cpu: ' + this._cpu + "</li>";
-        resultado += '<li> ram: ' + this._ram + "</li>";
-        resultado += '<li> hd: ' + this._hd + "</li>";
+        resultado += '<li> marca: ' + this.marca + "</li>";
+        resultado += '<li> modelo: ' + this.modelo + "</li>";
+        resultado += '<li> cpu: ' + this.cpu + "</li>";
+        resultado += '<li> ram: ' + this.ram + "</li>";
+        resultado += '<li> hd: ' + this.hd + "</li>";
         resultado += '</ul>';
         return (resultado);
     }

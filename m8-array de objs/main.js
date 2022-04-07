@@ -21,13 +21,13 @@ console.log(ordenador1.getNombre('Hola mundo'));
 //alert(`hd del ordenador1 es ${ordenador1.hd}`);  // Usamos el getter
 
 function nuevoPC() {
-    alert("nuevoPC");
+    alert("nuevoPC " + arrayPc.length);
     let datosPc1 = {
         marca: prompt('Marca: '),
         modelo: prompt('Modelo: '),
-        cpu: prompt('CPU: '),
-        ram: prompt('Ram: '),
-        hd: prompt('HD: ')
+        //   cpu: prompt('CPU: '),
+        //    ram: prompt('Ram: '),
+        //    hd: prompt('HD: ')
     }
     const ordenador10 = new Ordenador(datosPc1.marca, datosPc1.modelo, datosPc1.cpu, datosPc1.ram, datosPc1.hd);
     //   divResultado2.innerHTML = 'ordenador NUEVO:</br>' + ordenador10.getDescipcion();
@@ -41,9 +41,9 @@ function nuevoPCArr() {
     let datosPcX = {
         marca: prompt('Marca: '),
         modelo: prompt('Modelo: '),
-        //   cpu: prompt('CPU: '),
-        //    ram: prompt('Ram: '),
-        //   hd: prompt('HD: ')
+        cpu: prompt('CPU: '),
+        ram: prompt('Ram: '),
+        hd: prompt('HD: ')
     }
     let ordenadorX = new Ordenador(datosPcX.marca, datosPcX.modelo, datosPcX.cpu, datosPcX.ram, datosPcX.hd);
     arrayPc.push(ordenadorX);
