@@ -21,7 +21,7 @@ class Ordenador {
     set modelo(val) { this._modelo = val; }
     set cpu(val) { this._cpu = val; }
     set ram(val) { this._ram = val; }
-    set hd(val) { this._hd = val; }
+    set hd(val) { this._hd = val; } 
 
     
     // METODOS DE LA CLASE 
