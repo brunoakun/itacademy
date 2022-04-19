@@ -31,13 +31,6 @@ function veureHotel(nombre) {
     for (i = 0; i < arrayHoteles.length; i++) {
         if (arrayHoteles[i].nombre == nombre) {
             result += 'Hotel nº ' + i;
-            /*
-            result += '<b>Nombre: ' + arrayHoteles[i].nombre + "</b><br>";
-            result += 'Habitaciones: ' + arrayHoteles[i].habitaciones + "<br>";
-            result += 'Plantas: ' + arrayHoteles[i].plantas + "<br>";
-            result += 'Superficie: ' + arrayHoteles[i].superficie + "<br>";
-            */
-
             result += arrayHoteles[i].getDescipcion();
             result += 'Costo: ' + arrayHoteles[i].calcularManteniment() + " €<br>";
         }
