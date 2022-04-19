@@ -12,31 +12,31 @@ class Hotel {
     }
 
     // GETTERS Y SETTERS
-    get nombre() { return this._nombre; }
-    get habitaciones() { return this._habitaciones; }
-    get plantas() { return this._plantas; }
-    get superficie() { return this._superficie; }
+    get getNombre() { return this._nombre; }
+    get getHabitaciones() { return this._habitaciones; }
+    get getPlantas() { return this._plantas; }
+    get getSuperficie() { return this._superficie; }
 
-    set nombre(val) { this._nombre = val; }
-    set habitaciones(val) { this._habitaciones = val; }
-    set plantas(val) { this._plantas = val; }
-    set superficie(val) { this._superficie = val; }
+    set setNombre(val) { this._nombre = val; }
+    set setHabitaciones(val) { this._habitaciones = val; }
+    set setPlantas(val) { this._plantas = val; }
+    set setSuperficie(val) { this._superficie = val; }
 
 
     // METODOS DE LA CLASE 
 
     getDescipcion() {
         let resultado = "<ul>";
-        resultado += '<li><b> Nombre: ' + this._nombre + "</b></li>";
-        resultado += '<li>habitaciones: ' + this._habitaciones + "</li>";
-        resultado += '<li>plantas: ' + this._plantas + "</li>";
-        resultado += '<li>superficie: ' + this._superficie + "</li>";
+        resultado += '<li><b> Nombre: ' + this.getNombre + "</b></li>";
+        resultado += '<li>habitaciones: ' + this.getHabitaciones + "</li>";
+        resultado += '<li>plantas: ' + this.getPlantas + "</li>";
+        resultado += '<li>superficie: ' + this.getSuperficie + "</li>";
         resultado += '</ul>';
         return (resultado);
     }
 
     calcularManteniment() {
-        let costo = (this._habitaciones / this.HAB_EMPLEADO) * this.SALARIO;
+        let costo = (this.getHabitaciones / this.HAB_EMPLEADO) * this.SALARIO;
         return (costo.toFixed(2));
     }
 

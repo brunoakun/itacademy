@@ -29,7 +29,7 @@ function veureHotel(nombre) {
         return;
     }
     for (i = 0; i < arrayHoteles.length; i++) {
-        if (arrayHoteles[i].nombre == nombre) {
+        if (arrayHoteles[i].getNombre == nombre) {
             result += 'Hotel nº ' + i;
             result += arrayHoteles[i].getDescipcion();
             result += 'Costo: ' + arrayHoteles[i].calcularManteniment() + " €<br>";
@@ -65,8 +65,8 @@ function muestraTodos() {
     let result = '';
     if (!arrayHoteles) return;
     for (i = 0; i < arrayHoteles.length; i++) {
-        // result += i + " - " + arrayHoteles[i].nombre + "  ";
-        result += `<button onclick="veureHotel('${arrayHoteles[i].nombre}')">Ver Hotel ${arrayHoteles[i].nombre}</button><br>`;
+        // result += i + " - " + arrayHoteles[i].getNombre + "  ";
+        result += `<button onclick="veureHotel('${arrayHoteles[i].getNombre}')">Ver Hotel ${arrayHoteles[i].getNombre}</button><br>`;
     }
     divResultado2.innerHTML = result;
 }
