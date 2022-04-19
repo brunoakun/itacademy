@@ -30,13 +30,13 @@ function veureHotel(nombre) {
     }
     for (i = 0; i < arrayHoteles.length; i++) {
         if (arrayHoteles[i].getNombre == nombre) {
-            result += 'Hotel nº ' + i;
+            result += 'Hotel nº ' + Number(i + 1);
             result += arrayHoteles[i].getDescipcion();
             result += 'Costo: ' + arrayHoteles[i].calcularManteniment() + " €<br>";
         }
     }
     if (result == '') result = "Hotel " + nombre + " <b>NO existe</b>";
-    divResultado.innerHTML = result;
+    divResultado2.innerHTML = result;
 }
 
 
@@ -45,7 +45,7 @@ function donarDeBaixaHotel() {
     let result = '';
     let borrado = false;
     for (i = 0; i < arrayHoteles.length; i++) {
-        if (arrayHoteles[i].nombre == nombre) {
+        if (arrayHoteles[i].getNombre == nombre) {
             arrayHoteles.splice(i, 1);
             borrado = true;
         }
@@ -56,7 +56,7 @@ function donarDeBaixaHotel() {
     } else {
         result += `Hotel ${nombre} NO existe `;
     }
-    divResultado.innerHTML = result;
+    divResultado2.innerHTML = result;
     muestraTodos();
 }
 
@@ -67,6 +67,17 @@ function muestraTodos() {
     for (i = 0; i < arrayHoteles.length; i++) {
         // result += i + " - " + arrayHoteles[i].getNombre + "  ";
         result += `<button onclick="veureHotel('${arrayHoteles[i].getNombre}')">Ver Hotel ${arrayHoteles[i].getNombre}</button><br>`;
+    }
+    divResultado1.innerHTML = result;
+}
+
+
+function todosLosDatos() {
+    let result = '';
+    if (!arrayHoteles) return;
+    for (i = 0; i < arrayHoteles.length; i++) {
+        result += arrayHoteles[i].getDescipcion();
+        result += 'Costo: ' + arrayHoteles[i].calcularManteniment() + " €<br>";
     }
     divResultado2.innerHTML = result;
 }
