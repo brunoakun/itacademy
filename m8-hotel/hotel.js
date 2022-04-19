@@ -6,6 +6,9 @@ class Hotel {
         this._habitaciones = habitaciones;
         this._plantas = plantas;
         this._superficie = superficie;
+
+        this.SALARIO = 1500;
+        this.HAB_EMPLEADO = 20;
     }
 
     // GETTERS Y SETTERS
@@ -24,13 +27,17 @@ class Hotel {
 
     getDescipcion() {
         let resultado = "<ul>";
-        resultado += '<li> marca: ' + this.marca + "</li>";
-        resultado += '<li> modelo: ' + this.modelo + "</li>";
-        resultado += '<li> cpu: ' + this.cpu + "</li>";
-        resultado += '<li> ram: ' + this.ram + "</li>";
-        resultado += '<li> hd: ' + this.hd + "</li>";
+        resultado += '<li><b> Nombre: ' + this._nombre + "</b></li>";
+        resultado += '<li>habitaciones: ' + this._habitaciones + "</li>";
+        resultado += '<li>plantas: ' + this._plantas + "</li>";
+        resultado += '<li>superficie: ' + this._superficie + "</li>";
         resultado += '</ul>';
         return (resultado);
+    }
+
+    calcularManteniment() {
+        let costo = (this._habitaciones / this.HAB_EMPLEADO) * this.SALARIO;
+        return (costo);
     }
 
 }

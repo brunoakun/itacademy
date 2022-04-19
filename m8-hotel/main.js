@@ -9,7 +9,7 @@ function crearHotel() {
     }
     const hotel = new Hotel(hotelData.nombre, hotelData.habitaciones, hotelData.plantas, hotelData.superficie);
     arrayHoteles.push(hotel);
-   // alert(`Creado el Hotel ${hotelData.nombre} dentro del array arrayHoteles[]`);
+    // alert(`Creado el Hotel ${hotelData.nombre} dentro del array arrayHoteles[]`);
     muestraTodos();
 }
 
@@ -30,11 +30,16 @@ function veureHotel(nombre) {
     }
     for (i = 0; i < arrayHoteles.length; i++) {
         if (arrayHoteles[i].nombre == nombre) {
-            result += 'Hotel nº ' + i + "<br>";
+            result += 'Hotel nº ' + i;
+            /*
             result += '<b>Nombre: ' + arrayHoteles[i].nombre + "</b><br>";
             result += 'Habitaciones: ' + arrayHoteles[i].habitaciones + "<br>";
             result += 'Plantas: ' + arrayHoteles[i].plantas + "<br>";
             result += 'Superficie: ' + arrayHoteles[i].superficie + "<br>";
+            */
+
+            result += arrayHoteles[i].getDescipcion();
+            result += 'Costo: ' + arrayHoteles[i].calcularManteniment() + " €<br>";
         }
     }
     if (result == '') result = "Hotel " + nombre + " <b>NO existe</b>";
@@ -67,8 +72,8 @@ function muestraTodos() {
     let result = '';
     if (!arrayHoteles) return;
     for (i = 0; i < arrayHoteles.length; i++) {
-       // result += i + " - " + arrayHoteles[i].nombre + "  ";
-        result +=   `<button onclick="veureHotel('${arrayHoteles[i].nombre}')">Ver Hotel ${arrayHoteles[i].nombre}</button><br>`;
+        // result += i + " - " + arrayHoteles[i].nombre + "  ";
+        result += `<button onclick="veureHotel('${arrayHoteles[i].nombre}')">Ver Hotel ${arrayHoteles[i].nombre}</button><br>`;
     }
     divResultado2.innerHTML = result;
 }
