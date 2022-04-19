@@ -37,7 +37,7 @@ class Hotel {
 
     calcularManteniment() {
         let costo = (this._habitaciones / this.HAB_EMPLEADO) * this.SALARIO;
-        return (costo);
+        return (costo.toFixed(2));
     }
 
 }
