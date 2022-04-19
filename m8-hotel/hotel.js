@@ -22,10 +22,6 @@ class Hotel {
 
     // METODOS DE LA CLASE 
 
-    getNombre(nombre) {
-        return ("En aquests moments s'està executant: " + nombre);
-    }
-
     getDescipcion() {
         let resultado = "<ul>";
         resultado += '<li> marca: ' + this.marca + "</li>";

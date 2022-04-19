@@ -67,7 +67,8 @@ function muestraTodos() {
     let result = '';
     if (!arrayHoteles) return;
     for (i = 0; i < arrayHoteles.length; i++) {
-        result += i + " - " + arrayHoteles[i].nombre + " <br>";
+       // result += i + " - " + arrayHoteles[i].nombre + "  ";
+        result +=   `<button onclick="veureHotel('${arrayHoteles[i].nombre}')">Ver Hotel ${arrayHoteles[i].nombre}</button><br>`;
     }
     divResultado2.innerHTML = result;
 }
