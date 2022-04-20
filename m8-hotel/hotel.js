@@ -23,6 +23,7 @@ class Hotel {
     set setSuperficie(val) { this._superficie = val; }
 
 
+
     // METODOS DE LA CLASE 
 
     getDescipcion() {

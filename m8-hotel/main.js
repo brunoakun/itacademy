@@ -73,10 +73,47 @@ function muestraBotones() {
 
 function todosLosDatos() {
     let result = '';
- //   if (!arrayHoteles) return;
+    //   if (!arrayHoteles) return;
     for (hotel of arrayHoteles) {
         result += hotel.getDescipcion();
         result += 'Costo: ' + hotel.calcularManteniment() + " €<br>";
     }
     divResultado2.innerHTML = result;
+}
+
+function modifHotel() {
+    let nombre = prompt('Hotel a modificar: ');
+    let nombreHotel = '';
+    let result = "";
+    let modif = false;
+    for (i = 0; i < arrayHoteles.length; i++) {
+        nombreHotel = arrayHoteles[i].getNombre;
+        if (nombreHotel == nombre) {
+            updateHotel(nombreHotel)
+            modif = true;
+        }
+    }
+
+    if (modif) {
+        result += `El Hotel ${nombre} se ha modificado`;
+    } else {
+        result += `Hotel ${nombre} NO existe `;
+    }
+    divResultado2.innerHTML = result;    
+    veureHotel(nombreHotel);
+}
+
+function updateHotel(nombre) {
+    let hotelData = {
+        habitaciones: prompt('habitaciones: '),
+        plantas: prompt('plantas: '),
+        superficie: prompt('superficie: ')
+    }
+    for (hotel of arrayHoteles) {
+        if (hotel.getNombre == nombre) {
+            hotel.setHabitaciones = hotelData.habitaciones;
+            hotel.setPlantas = hotelData.plantas;
+            hotel.setSuperficie = hotelData.superficie;
+        }
+    }
 }
