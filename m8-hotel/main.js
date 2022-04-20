@@ -11,12 +11,13 @@ function crearHotel() {
     arrayHoteles.push(hotel);
     // alert(`Creado el Hotel ${hotelData.nombre} dentro del array arrayHoteles[]`);
     muestraBotones();
+    veureHotel(hotelData.nombre);
 }
 
 
 function datosHotel() {
     let nombre = prompt('nombre: ');
-    veureHotel(nombre);
+    veureHotel(hotelData.nombre);
 }
 
 
