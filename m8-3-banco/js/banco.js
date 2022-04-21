@@ -34,9 +34,10 @@ class cuenta {
 class cliente {
 
     // ATRIBUTOS de la clase cliente
-    constructor(nombre, apellidos) {
+    constructor(nombre, apellidos, [cuentas]) {
         this._nombre = nombre;
         this._apellidos = apellidos;
+        this._cuentas = [cuentas];
     }
 
     // GETTERS Y SETTERS
