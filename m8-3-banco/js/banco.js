@@ -5,6 +5,7 @@ class Cuenta {
         this._numCuenta = numCuenta;
         this._saldo = saldo;
         this._cliente = cliente;
+        this.movimietos = 0;
     }
 
     // GETTERS Y SETTERS
@@ -22,6 +23,8 @@ class Cuenta {
     ingresarImporte(importe) {
         let saldo = this.getSaldo;
         this.setSaldo(saldo + importe);
+        this._movimietos++;
+        console.log(this);
         return;
     }
 
