@@ -1,4 +1,4 @@
-class cuenta {
+class Cuenta {
 
     // ATRIBUTOS de la clase cuenta
     constructor(numCuenta, saldo = 0, cliente) {
@@ -31,13 +31,13 @@ class cuenta {
 
 
 
-class cliente {
+class Cliente {
 
     // ATRIBUTOS de la clase cliente
-    constructor(nombre, apellidos, [cuentas]) {
+    constructor(nombre, apellidos) {
         this._nombre = nombre;
         this._apellidos = apellidos;
-        this._cuentas = [cuentas];
+        this._cuenta = new Array();
     }
 
     // GETTERS Y SETTERS
@@ -49,6 +49,10 @@ class cliente {
 
 
     // METODOS DE LA CLASE  
+
+    crearCuenta(ccc) {
+        this._cuenta.push(ccc);
+    }
 
 
 }
