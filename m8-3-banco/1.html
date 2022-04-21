@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itacademy FDLP</title>
+</head>
+
+<body>
+    <h1>(M8) Exercici 2 </h1>
+    <p>
+        Dona't el diagrama de classes de la imatge.
+        <img src="img/banco.JPG" width="400px"><br><br>
+
+        Programa una aplicació que tingui 5 botons:<br>
+
+        1.- Crear client<br>
+        2.- Eliminar client<br>
+        3.- Crear compta d'un client<br>
+        4.- Ingresar euros en una compta d'un client<br>
+        5.- Retirar euros en una compta d'un client<br>
+        A tenir en compte:<br>
+        - El saldo inicial de totes les comptes ha de ser 0€<br>
+        - Al crear un client, no haurà de tenir cap compte "associada"<br>
+        - El diagrama UML mostra les propietats i mètodes mínims que han de tenir les classes, però pots crear-ne més si
+        és necessari.<br>
+    </p>
+    <button id="crearCliente" onclick="crearCliente()">Crear Cliente</button>
+    <button id="borrarCliente" onclick="borrarCliente()">Borrar Cliente</button>
+    <button id="crearCuentaCliente" onclick="crearCuentaCliente()">Crear cuenta de Cliente</button>
+    <button id="ingresarEnCuenta" onclick="ingresarEnCuenta()">ingresar € En Cuenta</button>
+    
+    <br>
+
+    <hr>
+    <b>Hoteles: </b>
+    <div id="divResultado1"></div>
+    <hr>
+    <div id="divResultado2"></div>
+
+    <script src="js/banco.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
