@@ -8,18 +8,16 @@ class Cliente {
 
     // GETTERS y SETTERS
 
-    get getNom() { return this._setNom; }
-    get getDni() { return this._setDni; }
-    get getCuenta() { return this._cuenta; }
+    get getNom() { return this._nombre; }
+    get getDni() { return this._dni; } 
 
     set setNom(val) { this._setNom = val; }
-    set setDni(val) { this._setDni = val; }
-    set setCuenta(val) { this._cuenta = val; }
+    set setDni(val) { this._setDni = val; } 
 
     // METODOS
 
     getInfo(){
-        return(`El cliente ${this.getNom} ${this.getDni} tiene `)
+        return(`El cliente ${this.getNom} ${this.getDni} tiene  ${this._cuentas.length} cuentas`)
     }
 
     addCuenta(ccc) {
