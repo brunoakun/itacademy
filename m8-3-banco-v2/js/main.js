@@ -27,7 +27,7 @@ muestraClientes();
 
 //Crear cliente
 function crearCliente() {
-    let dni = prompt('Entra dni del cliente').toUpperCase();
+    let dni = prompt('Entra dni del cliente a crear').toUpperCase();
     let valido = existeDni(dni);
     console.log(`Valido= ${valido.existe}  ${valido.i}`);
     if (!valido.existe) {
@@ -37,6 +37,18 @@ function crearCliente() {
         muestraClientes();
     } else {
         alert(`El cliente ya existe en la posición ${valido.indice} con nombre ${CLIENTES[valido.indice]._nombre}`);
+    }
+}
+
+// Borrar n cliente
+function borrarCliente() {
+    let dni = prompt('Entra dni del cliente a borrar').toUpperCase();
+    let valido = existeDni(dni);
+    if (valido.existe) {
+        CLIENTES.splice(valido.indice,1);
+        muestraClientes();
+    } else {
+        alert(`El cliente NO existe`);
     }
 }
 
@@ -55,7 +67,7 @@ function crearCuentaCliente() {
 }
 
 function movCuenta(tipo) {
-    let ccc = prompt('Nº de cuenta: 2081 - ');
+    let ccc = prompt('Nº de cuenta: ');
     let valCuenta = existeCuenta(ccc);
     if (valCuenta.existe) {
         let importe = prompt('Entra el importe');
@@ -88,7 +100,6 @@ function existeDni(dni) {
 
 // Validar cuenta
 function existeCuenta(ccc) {
-    ccc = '2081 - ' + ccc;
     let existe = false;
     for (i = 0; i < CUENTAS.length; i++) {
         cccCuenta = CUENTAS[i]._numCompte;
@@ -111,7 +122,7 @@ function muestraClientes() {
         result += cliente.getNom + ' ' + cliente.getDni + ' - ' + cliente._cuentas.length + ' Cuentas';
         result += '<ul>'
         for (cuenta of cliente._cuentas) {
-            result += '<li>CCC: ' + cuenta._numCompte + ' Saldo: ' + cuenta._saldo + ' Movimientos: ' + cuenta._numMoviments + ' </li>';
+            result += '<li><b>CCC: </b>' + cuenta._numCompte + '<br> <b>Saldo: </b>' + cuenta._saldo + '€ <b> Movimientos:</b> ' + cuenta._numMoviments + ' </li>';
         }
         result += '</ul>';
     }

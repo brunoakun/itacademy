@@ -3,7 +3,7 @@ class Cuenta {
 
     constructor(saldo = 0) {
         this._saldo = saldo;
-        this._numCompte = '2081 - ' + Cuenta.contador ++;
+        this._numCompte =   Cuenta.contador ++;
         this._numMoviments = 0;
     }
 
