@@ -1,23 +1,28 @@
 // Main
 
-let arrResult = [];
+let MOTOS = [];
+
+const moto1 = new Moto('Honda', 500);
+const moto2 = new Moto('Suzuki', 350);
+MOTOS.push(moto1);
+MOTOS.push(moto2);
+
+inicio();
+
+moto2.cilindrada = 1100;
 inicio();
 
 function inicio() {
-    for (i = 0; i < 100; i++) {
-        if (i % 2 == 0) arrResult.push(i);  // Es par
-    }
     muestraResultado()
-
-    console.log(arrResult);
+    console.log(MOTOS);
 }
 
 function muestraResultado() {
     let res = "";
     let resDiv = document.getElementById('resDiv');
-    let long = arrResult.length;
-    for (i = 0; i < long; i++) {
-        res += arrResult[i] + "<br>";
+
+    for (moto of MOTOS) {
+        res += moto.datosMoto() + "<br>";;
     }
     resDiv.innerHTML += res;
 }
