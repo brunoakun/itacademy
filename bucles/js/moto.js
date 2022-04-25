@@ -11,9 +11,10 @@ class Moto {
     //GETTERS SETTERS
     get marca() { return this._marca; }
     get cilindrada() { return this._cilindrada; }
+    get contador() { return this._contador; }
 
-    set marca(marca) { this._marca = marca; }
-    set cilindrada(cilindrada) { this._cilindrada = cilindrada; }
+    set marca(val) { this._marca = val; }
+    set cilindrada(val) { this._cilindrada = val; }
 
     //METODOS
     datosMoto() {
