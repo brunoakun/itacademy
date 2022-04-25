@@ -73,6 +73,7 @@ function crearCuentaCliente() {
 }
 
 function movCuenta(tipo) {
+    // Crear un movimiento (Ingrso/Reembolso)
     msgDiv.innerHTML = '';
     let ccc = prompt('Nº de cuenta: ');
     let valCuenta = existeCuenta(ccc);
