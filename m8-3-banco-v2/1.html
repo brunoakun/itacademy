@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Itacademy FDLP</title>
+    <style>
+        .red{
+            color: red;
+            font-size: large;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,12 +38,13 @@
     <button id="crearCuentaCliente" onclick="crearCuentaCliente()">Crear cuenta de Cliente</button>
     <button id="movCuenta1" onclick="movCuenta('ingresar')">ingresar € En Cuenta</button>
     <button id="movCuenta2" onclick="movCuenta('retirar')">retirar € En Cuenta</button>
-    
+
     <br>
 
     <hr>
-    <b>Result: </b>
-    <div id="divResultado1"></div>
+    <div class="red">
+        <div id="msgDiv"></div>
+    </div>
     <hr>
     <div id="divResultado2"></div>
 

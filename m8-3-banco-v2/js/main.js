@@ -1,3 +1,5 @@
+let msgDiv = document.getElementById('msgDiv');
+
 // Crear clientes de prueba
 let CLIENTES = [];
 
@@ -27,6 +29,7 @@ muestraClientes();
 
 //Crear cliente
 function crearCliente() {
+    msgDiv.innerHTML = '';
     let dni = prompt('Entra dni del cliente a crear').toUpperCase();
     let valido = existeDni(dni);
     console.log(`Valido= ${valido.existe}  ${valido.i}`);
@@ -36,24 +39,27 @@ function crearCliente() {
         CLIENTES.push(cliente);
         muestraClientes();
     } else {
-        alert(`El cliente ya existe en la posición ${valido.indice} con nombre ${CLIENTES[valido.indice]._nombre}`);
+        msgDiv.innerHTML = `El cliente ya existe en la posición ${valido.indice} con nombre ${CLIENTES[valido.indice]._nombre}`;
     }
 }
 
 // Borrar n cliente
 function borrarCliente() {
+    msgDiv.innerHTML = '';
     let dni = prompt('Entra dni del cliente a borrar').toUpperCase();
     let valido = existeDni(dni);
     if (valido.existe) {
-        CLIENTES.splice(valido.indice,1);
+        CLIENTES.splice(valido.indice, 1);
         muestraClientes();
+        msgDiv.innerHTML = `Cliente con dni ${dni} BORRADO`;
     } else {
-        alert(`El cliente NO existe`);
+        msgDiv.innerHTML = `El cliente NO existe`;
     }
 }
 
 //Crear Cuenta de cliente
 function crearCuentaCliente() {
+    msgDiv.innerHTML = '';
     let dni = prompt('Entra dni del cliente').toUpperCase();
     let valido = existeDni(dni);
     if (valido.existe) {
@@ -62,11 +68,12 @@ function crearCuentaCliente() {
         CLIENTES[valido.indice].addCuenta(cuenta);
         muestraClientes();
     } else {
-        alert(`Este DNI no existe`);
+        msgDiv.innerHTML = `Este DNI no existe`;
     }
 }
 
 function movCuenta(tipo) {
+    msgDiv.innerHTML = '';
     let ccc = prompt('Nº de cuenta: ');
     let valCuenta = existeCuenta(ccc);
     if (valCuenta.existe) {
@@ -74,7 +81,7 @@ function movCuenta(tipo) {
         if (tipo == 'ingresar') CUENTAS[valCuenta.indice].ingresar(importe);
         if (tipo == 'retirar') CUENTAS[valCuenta.indice].retirar(importe);
     } else {
-        alert('Esta cuenta NO existe');
+        msgDiv.innerHTML = `Esta cuenta no existe`;
     }
     muestraClientes();
 }
