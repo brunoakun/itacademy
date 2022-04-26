@@ -23,6 +23,6 @@ class Cliente {
     addCuenta(ccc) {
         // añadir una cuenta al cliente
         this._cuentas.push(ccc);
-        //this.setCuenta.push(ccc);
+        //this.getCuenta.push(ccc);
     }
 }
