@@ -14,9 +14,9 @@ class Cine extends Edificio {
     set capacidad(capacidad) { this._capacidad = capacidad; }
 
     // METODOS
-    recaudacion(sesion) {
+    recaudacion(asistentes, precioEntrada) {
         // multiplicar el preu d’una entrada pel número d’assistents a la sessió,
-        let importe = parseFloat(sesion.asistentes * sesion.precioEntrada);
-        return (`S’han recaptat ${importe} €`);
+        let importe = parseFloat(asistentes * precioEntrada);
+        return (importe);
     }
 }
