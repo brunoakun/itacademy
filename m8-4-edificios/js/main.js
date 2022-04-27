@@ -87,10 +87,11 @@ function muestraHoteles() {
 //////////////////////////////////////
 
 
-function crearHospital() {    
+function crearHospital() {
     let h1 = { 'nombre': prompt("Hospi nombre?"), 'plantas': prompt("plantas?"), 'superficie': prompt("Superficie?"), 'pacientes': prompt("Pacientes?") };
     const hospital = new Hospital(h1.nombre, parseInt(h1.plantas), parseInt(h1.superficie), parseInt(h1.pacientes));
     HOSPITALES.push(hospital);
 
+    console.log('\n');
     muestraHospitales()
 }
