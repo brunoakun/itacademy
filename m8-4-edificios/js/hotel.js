@@ -24,7 +24,8 @@ class Hotel extends Edificio {
          * Exemples:
          *   L’”Hotel Hilton”, de 73.858 m² i 22 plantes. Té 583 habitacions.
          */
-         
-        return (`El Hotel ${this.nombre}, de ${this.superficie} m² i ${this.plantas} plantes. Té ${this.habitaciones} habitacions.`);
+
+        let currantes = Math.ceil(this.habitaciones / 20);
+        return (`El Hotel ${this.nombre}, de ${this.superficie} m² i ${this.plantas} plantes. Té ${this.habitaciones} habitacions. Necesita ${currantes} y ${currantes*1000} € en sueldos mensuales`);
     }
 }
