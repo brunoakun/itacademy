@@ -1,57 +1,48 @@
-class Cuenta{
+class Cuenta {
+    static contador = 0;    // Generador de número de cuentas
 
-    constructor (numCompte, saldo = 0){
-        this._saldo         = saldo;
-        this._numCompte     = numCompte;
-        this._numMoviments  = 0;
-    }
-
-    get getSaldo() {
-        return this._saldo;
-    }
-     
-    set setSaldo(s) {
-        this._saldo  = s;
-    }
-    get getNumCompte() {
-        return this._numCompte;
-    }
-     
-    set setNumCompte(c) {
-        this._numCompte = c;
-    }
-    get getNumMoviments() {
-        return this._numMoviments;
-    }
-     
-    set setNumMoviments(m) {
-        this._numMoviments = m;
+    constructor(saldo = 0) {
+        this._saldo = saldo;
+        this._numCompte = Cuenta.contador ++;
+        this._numMoviments = 0;
     }
 
-    toString(){
+
+    // GETTERS y SETTERS
+
+    get getSaldo() { return this._saldo; }
+    get getNumCompte() { return this._numCompte; }
+    get getNumMoviments() { return this._numMoviments; }
+
+    set setNumCompte(c) { this._numCompte = c; }
+    set setSaldo(s) { this._saldo = s; }
+    set setNumMoviments(m) { this._numMoviments = m; }
+
+    // METODOS
+
+    toString() {
         return `El compte ${this.getNumCompte} té un saldo de ${this.getSaldo}`;
     }
 
-    ingresar (quantitat){
-        this.setSaldo += parseInt(quantitat);
-        this.setNumMoviments ++;
+    ingresar(quantitat) {
+        this._saldo += parseInt(quantitat);
+        this._numMoviments += 1;
         console.log(this);
     }
 
-    retirar (quantitat){
-        if(parseInt(quantitat) <= this.getSaldo){
-            this.setSaldo -= parseInt(quantitat);
-            this.setNumMoviments ++;
-            console.log(this);
-
-        }else{
-            alert (`No tens prou saldo`);
+    retirar(quantitat) {
+        if (parseInt(quantitat) <= this._saldo) {
+            this._saldo -= parseInt(quantitat);
+            this._numMoviments += 1;
+            //console.log(this);
+        } else {
+            alert('No hay suficiente SALDO');
         }
     }
-    retornarSaldo(){
-       alert(`El saldo actual es: ${this.getSaldo}` );
+    retornarSaldo() {
+        alert(`El saldo actual es: ${this.getSaldo}`);
     }
-    obtenirNumTransaccions(){
-        alert (`El nombre de transaccions d'aquest compte és de: ${this.getNumMoviments}`)
+    obtenirNumTransaccions() {
+        alert(`El nombre de transaccions d'aquest compte és de: ${this.getNumMoviments}`)
     }
 }
