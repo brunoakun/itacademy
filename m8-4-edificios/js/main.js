@@ -92,6 +92,5 @@ function crearHospital() {
     const hospital = new Hospital(h1.nombre, parseInt(h1.plantas), parseInt(h1.superficie), parseInt(h1.pacientes));
     HOSPITALES.push(hospital);
 
-    console.log('\n');
     muestraHospitales()
 }
