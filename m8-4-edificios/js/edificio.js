@@ -27,6 +27,13 @@ class Edificio {
         // Cada minuto de limpieza equivale a 1€
         let minutosDeLimpieza = 0;
         minutosDeLimpieza = parseFloat(this.superficie / 5) + parseFloat(this.plantas / 0.5);
+
+        /*
+        let hours = Math.floor(min / 60),
+            minuts = min % 60,
+            monthlyCost = min * 30;
+        */
+
         return (minutosDeLimpieza * 30);
     }
 
@@ -42,12 +49,12 @@ class Edificio {
         let vigilantes = 0;
         let coste = 0;
         if (this.tipo == 'hospital' || this.tipo == 'hotel') {
-            vigilantes = parseInt(this.superficie / 1000);
+            vigilantes = Math.ceil(this.superficie / 1000);
         }
-        if (this.tipo == 'cine' ) {
-            vigilantes = parseInt(this.superficie / 3000);
+        if (this.tipo == 'cine') {
+            vigilantes = Math.ceil(this.superficie / 3000);
         }
-        
+
         if (vigilantes < 1) vigilantes = 1;
         coste = vigilantes * 1300;
         if (this.tipo == 'hotel') coste += 500;
@@ -55,7 +62,7 @@ class Edificio {
         return {
             'tipo': this.tipo,
             'vigilantes': vigilantes,
-            'coste':coste
+            'coste': coste
         }
 
     }
