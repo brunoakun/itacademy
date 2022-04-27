@@ -54,3 +54,30 @@ function muestraCines() {
         console.log(`El cine ${cine.nombre} tiene un coste de limpieza de ${cine.netejar()} € y un coste de seguridad de ${cine.costeVigilancia().coste} € para sus ${hospital.costeVigilancia().vigilantes} vigilantes`);
     }
 }
+
+
+
+/**
+ * Hoteles
+ */
+
+console.log('__________________ Hoteles ____________________');
+
+HOTELES = [];
+let hot1 = { 'nombre': 'Ritz', 'plantas': 10, 'superficie': 758, 'habitaciones': 564 };
+let hot2 = { 'nombre': 'Mandarín', 'plantas': 24, 'superficie': 2654, 'habitaciones': 1231 };
+
+hotel1 = new Hotel(hot1.nombre, hot1.plantas, hot1.superficie, hot1.habitaciones);
+hotel2 = new Hotel(hot2.nombre, hot2.plantas, hot2.superficie, hot2.habitaciones);
+
+HOTELES.push(hotel1);
+HOTELES.push(hotel2);
+
+
+muestraHoteles();
+
+function muestraHoteles() {
+    for (hotel of HOTELES) {
+        console.log(hotel.infoHotel());
+    }
+}
