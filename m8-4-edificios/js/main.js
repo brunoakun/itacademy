@@ -11,8 +11,7 @@ let h2 = { 'nombre': 'Tecknon', 'plantas': 15, 'superficie': 18000, 'pacientes':
 hospital1 = new Hospital(h1.nombre, h1.plantas, h1.superficie, h1.pacientes);
 hospital2 = new Hospital(h2.nombre, h2.plantas, h2.superficie, h2.pacientes);
 
-HOSPITALES.push(hospital1);
-HOSPITALES.push(hospital2);
+HOSPITALES.push(hospital1, hospital2);
 muestraHospitales();
 
 function muestraHospitales() {
@@ -34,8 +33,7 @@ let c2 = { 'nombre': 'Glorias Multicines', 'plantas': 2, 'superficie': 850, 'cap
 cine1 = new Cine(c1.nombre, c1.plantas, c1.superficie, c1.capacidad);
 cine2 = new Cine(c2.nombre, c2.plantas, c2.superficie, c2.capacidad);
 
-CINES.push(cine1);
-CINES.push(cine2);
+CINES.push(cine1, cine2);
 
 // Calcular recaudación:
 let asistentes = parseInt(prompt(`¿Cual ha sido el número de asistentes?`));
@@ -70,9 +68,7 @@ let hot2 = { 'nombre': 'Mandarín', 'plantas': 24, 'superficie': 2654, 'habitaci
 hotel1 = new Hotel(hot1.nombre, hot1.plantas, hot1.superficie, hot1.habitaciones);
 hotel2 = new Hotel(hot2.nombre, hot2.plantas, hot2.superficie, hot2.habitaciones);
 
-HOTELES.push(hotel1);
-HOTELES.push(hotel2);
-
+HOTELES.push(hotel1, hotel2);
 
 muestraHoteles();
 
