@@ -1,3 +1,4 @@
+
 /**
  * Hospitales
  */
@@ -36,8 +37,12 @@ cine2 = new Cine(c2.nombre, c2.plantas, c2.superficie, c2.capacidad);
 CINES.push(cine1, cine2);
 
 // Calcular recaudación:
-let asistentes = parseInt(prompt(`¿Cual ha sido el número de asistentes?`));
-let precioEntrada = parseFloat(prompt(`¿precio de la Entrada?`));
+
+//let asistentes = parseInt(prompt(`¿Cual ha sido el número de asistentes?`));
+//let precioEntrada = parseFloat(prompt(`¿precio de la Entrada?`));
+let asistentes = 22;
+let precioEntrada = 55;
+
 if (asistentes > cine1.capacidad) {
     alert(`no pueden haber más de ${cine1.capacidad} asistentes`);
 } else {
@@ -76,4 +81,16 @@ function muestraHoteles() {
     for (hotel of HOTELES) {
         console.log(hotel.infoHotel());
     }
+}
+
+
+//////////////////////////////////////
+
+
+function crearHospital() {    
+    let h1 = { 'nombre': prompt("Hospi nombre?"), 'plantas': prompt("plantas?"), 'superficie': prompt("Superficie?"), 'pacientes': prompt("Pacientes?") };
+    const hospital = new Hospital(h1.nombre, parseInt(h1.plantas), parseInt(h1.superficie), parseInt(h1.pacientes));
+    HOSPITALES.push(hospital);
+
+    muestraHospitales()
 }
