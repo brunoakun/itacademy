@@ -5,14 +5,16 @@
 
 console.log('__________________ Hospitales ____________________');
 
-HOSPITALES = [];
+const HOSPITALES = [];
 let h1 = { 'nombre': 'Sagrada Familia', 'plantas': 40, 'superficie': 50000, 'pacientes': 10000 };
 let h2 = { 'nombre': 'Tecknon', 'plantas': 15, 'superficie': 18000, 'pacientes': 750 };
+let h3 = { 'nombre': 'Tecknon2', 'plantas': 125, 'superficie': 222, 'pacientes': 3333 };
 
 hospital1 = new Hospital(h1.nombre, h1.plantas, h1.superficie, h1.pacientes);
 hospital2 = new Hospital(h2.nombre, h2.plantas, h2.superficie, h2.pacientes);
+hospital3 = new Hospital(h3.nombre, h3.plantas, h3.superficie, h3.pacientes);
 
-HOSPITALES.push(hospital1, hospital2);
+HOSPITALES.push(hospital1, hospital2, hospital3);
 muestraHospitales();
 
 function muestraHospitales() {
@@ -88,9 +90,17 @@ function muestraHoteles() {
 
 
 function crearHospital() {
+    let errorMsg = '';
     let h1 = { 'nombre': prompt("Hospi nombre?"), 'plantas': prompt("plantas?"), 'superficie': prompt("Superficie?"), 'pacientes': prompt("Pacientes?") };
-    const hospital = new Hospital(h1.nombre, parseInt(h1.plantas), parseInt(h1.superficie), parseInt(h1.pacientes));
-    HOSPITALES.push(hospital);
+    if (!h1.nombre) errorMsg += `Es necesario un nombre!`;
+    if (!h1.plantas) errorMsg += `\nIndica el número de plantas`;
+
+    if (!errorMsg) {
+        const hospital = new Hospital(h1.nombre, parseInt(h1.plantas), parseInt(h1.superficie), parseInt(h1.pacientes));
+        HOSPITALES.push(hospital);
+    } else {
+        alert(errorMsg);
+    }
 
     muestraHospitales()
 }
