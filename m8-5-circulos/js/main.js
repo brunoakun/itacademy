@@ -22,7 +22,7 @@ function crearCirculo() {
 
 function calculaDistancia() {
     let msg = '';
-    msg = `LA distacia entre centros es de ${CIRCULOS[0].distanciaEntreCentros(CIRCULOS[1])}`;
+    msg = `La distacia entre centros es de ${(CIRCULOS[0].distanciaEntreCentros(CIRCULOS[1])).toFixed(2)}`;
     // document.getElementById('result').innerHTML = msg;
     alert(msg);
 
