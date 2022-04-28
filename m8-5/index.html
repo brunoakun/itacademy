@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M8-5</title>
+</head>
+
+<body>
+    Fer una aplicació on l'usuari introdueix les coordenades x, y de dos cercles i els seus respectius radis.<br>
+    Crear la classe Punt i la classe Cercle: <br>
+    Classe Punt<br>
+    La classe Punt tindrà els atributs posicioX i posicioY. A més, tindrà el constructor parametritzat amb tots els
+    atributs de la classe.<br>
+    Classe Cercle
+    <br>
+    La classe Cercle tindrà els atributs centre (un punt) i el radi (distància entre el centre i qualsevol punt de la
+    circumferència. A més, tindrà el constructor amb tots els paràmetres i els següents mètodes:
+    <br>
+    ⦁ distanciaCentres(altreCercle): Retorna la distància entre el centre del cercle actual i el rebut com a paràmetre.
+    <br>
+    ⦁ equals(altreCercle): Retorna true si dos cercles són iguals (si tenen el mateix centre i el mateix radi).
+    <br>
+    ⦁ sonConcentrics(altreCercle): Retorna true si dos cercles són concèntrics (tenen igual centre).
+    <br>
+    ⦁ tenenIgualRadi(altreCercle): Retorna true si dos cercles tenen el mateix radi.
+    <br>
+    ⦁ sonTangents(altreCercle): Retorna true si dos cercles són tangents.
+    <br>
+    ⦁ sonSecants(altreCercle): Retorna true si dos cercles són secants.
+    <br>
+    ⦁ noEsToquen(altreCercle): Retorna true si dos cercles no es toquen.
+    <br>
+    Al final l'aplicació mostrarà per pantalla el resultat de fer la crida a tots els mètodes de la classe Cercle.
+    <hr>
+    <label>Coordenada X1:</label>
+    <input type="text" id="x1">
+    <label>Coordenada Y1:</label>
+    <input type="text" id="y1">
+    <label>Radio 1:</label>
+    <input type="text" id="r1">
+    <button onclick="crearCirculo()">Crear Circulo</button>
+    <br>
+
+
+    <button onclick="calculaDistancia()">Distancia Entre Centros</button>
+    <hr>
+    <div id="result"></div>
+
+    <script src="js/punto.js"></script>
+    <script src="js/circulo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
