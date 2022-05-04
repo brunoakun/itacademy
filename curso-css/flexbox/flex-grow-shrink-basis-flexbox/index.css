@@ -4,10 +4,10 @@
   }
   
   .home {
-    flex: 1;
+    flex: 1;    /* El tamaño para los elementos, responsive*/
   }
   
   .logout {
-    flex: 1;
+    flex: 2; 
   }
   

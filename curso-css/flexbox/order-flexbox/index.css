@@ -1,0 +1,11 @@
+.container {
+  border: 5px solid #ffcc5c;
+  display: flex;
+}
+
+.item2 {
+  order: 1;  /*order: -1;  lo sitúa el primero */
+} 
+.item3 {
+  order: 2;  /*order: -1;  lo sitúa el primero */
+} 
