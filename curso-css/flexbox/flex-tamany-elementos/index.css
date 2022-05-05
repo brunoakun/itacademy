@@ -11,3 +11,6 @@
     flex: 2; 
   }
   
+  .search {
+    flex: 1;    /* El tamaño para los elementos, responsive*/
+  }
